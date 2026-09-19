@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "toolpkg_id": "com.deskpet",
+  "version": "1.2.7",
+  "main": "main.js",
+  "author": [
+    "Operit"
+  ],
+  "display_name": {
+    "zh": "DeepSeek 桌宠",
+    "en": "Desk Pet"
+  },
+  "description": {
+    "zh": "悬浮在系统层的 AI 桌宠：可自定义形象与台词，支持定时提醒、DeepSeek 余额与峰谷提示。无设置界面，全部通过 AI 工具配置。",
+    "en": "An overlay AI desktop pet with customizable skin & lines."
+  },
+  "enabled_by_default": true,
+  "subpackages": [
+    {
+      "id": "pet",
+      "entry": "packages/pet.js",
+      "enabled_by_default": true,
+      "display_name": {
+        "zh": "桌宠控制",
+        "en": "Desk Pet Control"
+      },
+      "description": {
+        "zh": "桌宠的形象、台词、提醒、余额与运行控制（18 个工具）",
+        "en": "Skin, lines, reminders, balance, runtime control (18 tools)"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "key": "overlay_dex",
+      "path": "resources/native/overlay.dex",
+      "mime": "application/vnd.android.dex"
+    },
+    {
+      "key": "whale_pet",
+      "path": "assets/skins/whale/pet.png",
+      "mime": "image/png"
+    },
+    {
+      "key": "sfx_press",
+      "path": "assets/sfx/press.mp3",
+      "mime": "audio/mpeg"
+    },
+    {
+      "key": "sfx_release",
+      "path": "assets/sfx/release.mp3",
+      "mime": "audio/mpeg"
+    }
+  ]
+}
