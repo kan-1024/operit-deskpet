@@ -1,0 +1,57 @@
+{
+  "formatVersion": 1,
+  "id": "whale",
+  "name": "小鲸鱼女仆",
+  "asset": "pet.png",
+  "baseSize": 610,
+  "anchor": {
+    "x": 1.0,
+    "y": 1.0
+  },
+  "states": {
+    "idle": {
+      "frames": [
+        "pet.png"
+      ]
+    }
+  },
+  "press": {
+    "scaleY": 0.88,
+    "scaleX": 1.05,
+    "origin": "50% 100%",
+    "transition": "transform .22s cubic-bezier(.34,1.56,.64,1)"
+  },
+  "bubble": {
+    "offsetFromPet": [
+      0,
+      -0.55
+    ],
+    "maxWidthRatio": 0.95,
+    "palette": {
+      "stroke": "#203170",
+      "fg": "#536ba9",
+      "hint": "#9fb0d9",
+      "bg": "#ffffff"
+    },
+    "styles": {
+      "label": {
+        "size": 66,
+        "weight": 600
+      },
+      "amount": {
+        "size": 128,
+        "weight": 800
+      },
+      "period": {
+        "size": 104,
+        "weight": 800
+      },
+      "hint": {
+        "size": 56,
+        "weight": 400,
+        "color": "#9fb0d9"
+      }
+    }
+  },
+  "credit": "小鲸鱼形象来自 MeteorNOX/DeepSeek-Balance-Whale-Widget（MIT）"
+}
