@@ -1,0 +1,65 @@
+{
+  "formatVersion": 1,
+  "variables": { "name": "小鲸鱼" },
+  "pools": {
+    "greet": { "weights": [1, 1], "lines": ["我来啦~", "小鲸鱼上线"] },
+    "poke": { "weights": [1, 1, 1, 1], "lines": ["别戳啦~", "痒！", "在的在的", "干嘛呀"] },
+    "pokeRapid": { "weights": [1, 1], "lines": ["再戳就生气了", "呜……别戳了"] },
+    "pokeBack": { "weights": [1], "lines": ["好啦好啦"] },
+    "slot.deepnight": { "weights": [1, 1], "lines": ["夜深了，早点睡吧", "这个点了还不睡？"] },
+    "slot.morning": { "weights": [1, 1], "lines": ["早上好~", "新的一天开始啦"] },
+    "slot.peakStart": { "weights": [1, 1], "lines": ["高峰期开始了，钱包在滴血", "进入高峰时段，悠着点用"] },
+    "slot.peakEnd": { "weights": [1, 1], "lines": ["谷价了，随便用", "高峰期结束，松口气"] },
+    "remind.meal": { "weights": [1], "lines": ["该吃饭啦！"] },
+    "remind.water": { "weights": [1], "lines": ["喝口水吧~"] },
+    "balance": { "weights": [1, 1], "lines": ["余额还够用", "钱包还有点余粮"] },
+
+    "say.timeslot": {
+      "format": "rich",
+      "groups": [
+        { "w": 1, "variants": [[
+          { "t": "当前时间段为:", "s": "label" },
+          { "t": "{peakName}", "s": "period", "c": "{peakColor}" },
+          { "t": "余额 ¥{balance}", "s": "hint" }
+        ]] }
+      ]
+    },
+
+    "say.random": {
+      "format": "rich",
+      "groups": [
+        { "w": 1, "variants": [
+          [{ "t": "好模型... ↓", "s": "amount" }],
+          [{ "t": "好女孩...↓", "s": "amount" }],
+          [{ "t": "不知道用户有什么用，先赶走吧~", "s": "label" }],
+          [{ "t": "我...我...我也要挣钱吗？", "s": "label" }],
+          [{ "t": "我去吃饭啦，测完叫我", "s": "label" }],
+          [{ "t": "压力一只蓝色大肥鱼？！", "s": "label" }],
+          [{ "t": "DeepSleep...", "s": "label" }],
+          [{ "t": "坏了...用户彻底怒了！", "s": "label" }],
+          [{ "t": "你目录里的dsh是什么...大烧货吗...?", "s": "label" }],
+          [{ "t": "恭喜你实现token自由！token全跑了！", "s": "label" }],
+          [{ "t": "真当我是便宜货啊...", "s": "label" }],
+          [{ "t": "哦鲸鲸... ", "s": "amount" }],
+          [{ "t": "原来是劣等模型...", "s": "label" }],
+          [{ "t": "骂我也算token哦", "s": "label" }],
+          [{ "t": "不许叫我大肥鱼！", "s": "label" }],
+          [{ "t": "去问你的豆包吧", "s": "label" }]
+        ] }
+      ]
+    }
+  },
+  "bubble": {
+    "say": [{ "t": "{text}", "s": "label" }],
+    "remind": [{ "t": "{text}", "s": "label" }],
+    "balance": [
+      { "t": "当前时段:", "s": "label" },
+      { "t": "{peakText}", "s": "period", "c": "{peakColor}" },
+      { "t": "余额 ¥{balance}", "s": "hint" }
+    ],
+    "lowBalance": [
+      { "t": "余额", "s": "label" },
+      { "t": "¥{balance}", "s": "amount" }
+    ]
+  }
+}
