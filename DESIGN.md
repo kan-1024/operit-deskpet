@@ -672,7 +672,7 @@ formatVersion: 1
 > 编译部署流程不变：改 JS 用 `debug_install_toolpkg(source_path=...)` 重装；改 native 需先重编 dex（javac + D8，见 BUILD.md）。注意插件存在「已安装副本」与「dev_package 源」两份，`pet_reload` 只读已安装副本。本轮验证：`pet358=1`、`bubble748=1`、`cleanup roots=3`、`hostReady:true`、戳击 `lastSayPool` 符合预期、随机碎碎念实测触发成功、`chatter.intervalMs=60000`（1 分钟）、**冷启动自启动实测通过**（`boot.log` 记录 `res-fallback → host-ok`，sdcard dex 缓存 `…/com.deskpet/overlay.dex` 已生成）。
 
 
-6. **自启动资源兜底（1.2.3~1.2.6 迭代）—— “冷启动可见但音效丢失”修复**
+6. **自启动资源兜底（对应发布版本 1.0.3）—— “冷启动可见但音效丢失”修复**
    - 现象：冷启动时桌宠能自动出现，但点击音效缺失；且失败被静默缓存，之后永不恢复。
    - 根因链（三轮定位）：
      1. 冷启动早期派发钩子的引擎里 `ToolPkg.readResource` 不可用（`runtime target is empty`）。皮肤因 `loadSkin` **先读 sdcard**（`cfgDir/skins/<id>/`）而幸免；音效 `loadSfx` 只有“读包内”一条路，失败后 `sfxPressUri` 空置。
