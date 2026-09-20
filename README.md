@@ -1,6 +1,6 @@
 > **【本仓库说明 · 修复与优化分支】**
 >
-> - 本仓库是 Operit ToolPkg「DeepSeek 桌宠」(包名 `com.deskpet`) 的 **社区修复与优化分支**，版本 **v1.2.7**。
+> - 本仓库是 Operit ToolPkg「DeepSeek 桌宠」(包名 `com.deskpet`) 的 **社区修复与优化分支**，版本 **v1.0.3**（测试版，非正式发布；后续未发布版本均视为测试版）。
 > - **来源**：来源为社区流传的 `com.deskpet` 包（**未找到公开作者 / 原始仓库**：经 GitHub 全局代码搜索、Operit 相关市场仓库检索均无结果）。若您是原作者或知晓出处，欢迎提交 Issue 告知，我们会补全署名或按您的要求处理。
 > - **本分支的修复**：冷启动不自动启动、冷启动后点击音效丢失等（详见 `CHANGELOG-FIXES.md`）。
 > - 渲染基线与原设计保持一致；`native` 层（OverlayHost.java / overlay.dex）未改动。
