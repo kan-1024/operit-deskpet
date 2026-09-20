@@ -1282,7 +1282,7 @@ function reg(name, fn) {
 reg('status', async function () {
   return {
     ok: true,
-    version: '1.2.7',
+    version: '1.0.3',
     configDir: cfgDir,
     hostReady: hostReady,
     hostError: hostError,
