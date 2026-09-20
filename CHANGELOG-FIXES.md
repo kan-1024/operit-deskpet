@@ -1,4 +1,4 @@
-# deskpet 修复与优化说明（v1.0.3 · 测试版）
+# deskpet 修复与优化说明（1.0.3 · 正式版）
 
 对本地 com.deskpet 的修复迭代记录。所有改动均遵守包内 AI_GUIDE.md 约束（不扩大范围、保持渲染基线）。
 
@@ -22,12 +22,12 @@
 - `install_skin` 增加 base64 预校验，非法时提前返回明确错误（`bad_image_base64`）。
 - `emitBubble` 可见性判断写法统一（`settings.pet && settings.pet.visible === false`）。
 - `runSchedule` slot 分支冗余合并；`tryBoot` 尾部冗余合并。
-- `DESIGN.md` 新增「自启动资源兜底（1.2.3~1.2.6）」章节。
+- `DESIGN.md` 新增「自启动资源兜底（1.0.x 迭代）」章节。
 
 ## 保持不变
 - 渲染基线：三层 DOM（#bob/#jump/#pet）+ wp-tap 弹跳 + 合成层三件套，严格对齐原设计。
 - native 层（OverlayHost.java / overlay.dex）未改动；用户配置结构未改动。
 
 ## 交付物
-- `com.deskpet-v1.2.7.toolpkg` — 完整包，可直接烧录或放入 packages 目录。
+- `com.deskpet-v1.0.3.toolpkg` — 完整包，可直接烧录或放入 packages 目录。
 - 涉及文件：`main.js`、`manifest.json`、`DESIGN.md`。
