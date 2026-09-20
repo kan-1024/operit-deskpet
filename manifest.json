@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "toolpkg_id": "com.deskpet",
-  "version": "1.2.7",
+  "version": "1.0.3",
   "main": "main.js",
   "author": [
     "Operit"
