@@ -1,0 +1,11 @@
+# 本地运行时与构建产物（不入库）
+*.log
+*.bak
+*.bak-*
+cleanup/
+node_modules/
+.DS_Store
+settings.json
+state.json
+voice.json
+schedule.json
